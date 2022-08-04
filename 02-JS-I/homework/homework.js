@@ -75,10 +75,9 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  var st1 = str1.lenght();
-  var st2 = str2.lenght();
 
-  if(st1 == st2){
+  //Confundi length con lenght, por eso daba error
+  if(str1.length === str2.length){
     return true;
   }else{
     return false;
@@ -165,7 +164,7 @@ function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   var numRedondeado = Math.round(num);
-  return numeroRedondeado;
+  return numRedondeado;
 }
 
 function redondearHaciaArriba(num) {
@@ -187,12 +186,12 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero == 0){
+  if (numero === 0){
     return false;
   }else if(numero > 0){
-    return console.log("es positivo");
+    return "Es positivo";
   }else if(numero<0){
-    return console.log("es negativo");
+    return "Es negativo";
   }
 }
 
@@ -261,17 +260,17 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  var numCaracteres = letra.lenght();
+  var numCaracteres = letra.length;
   if (numCaracteres == 1){
-if(letra=='a'|| letra=='e'||letra == 'i'||letra == 'o'||letra == 'u'){
-  return console.log("Es vocal");
+if(letra ==='a'|| letra ==='e'||letra === 'i'||letra === 'o'||letra === 'u'){
+  return "Es vocal";
 }else{
-  return console.log("Dato incorrecto")
+  return "Dato incorrecto";
 }
   }else if(numCaracteres>1){
-    return console.log("Dato incorrecto")
+    return "Dato incorrecto";
   }
-  
+
 }
 
 
