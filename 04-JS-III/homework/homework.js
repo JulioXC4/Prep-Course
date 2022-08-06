@@ -270,22 +270,18 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
 
-  var cont = 0;
   var nuevoArray = [];
-
-  for(var i = 0; i < numero.length ; i++){
-
-    if(cont <= 10){
-    numero[i] = numero[i] + 2;
-    nuevoArray[i] = numero[i];
-    cont ++;
-    }else if(cont === 10){
-      return "Se interrumpió la ejecución"
+  var sumatoria = numero;
+  
+  for (var i = 0; i < 10; i++){
+    sumatoria = sumatoria + 2;
+    if(sumatoria === i){
       break;
+    }else {
+      nuevoArray.push(sumatoria);
     }
   }
-
-  return nuevoArray;
+  
 }
 
 
