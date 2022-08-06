@@ -274,14 +274,16 @@ function breakStatement(numero) {
   var sumatoria = numero;
   
   for (var i = 0; i < 10; i++){
-    sumatoria = sumatoria + 2;
+    
     if(sumatoria === i){
+      return "Se interrumpió la ejecución"
       break;
     }else {
+      sumatoria = sumatoria + 2;
       nuevoArray.push(sumatoria);
     }
   }
-  
+  return nuevoArray;
 }
 
 
@@ -293,17 +295,21 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
 
-  nuevoArray = [];
-  nuevoArray[0] = numero;
+ var nuevoArray = [];
+ var suma = numero;
 
-  for (var i = 1; i < 10 ; i++){
-    if(i != 5){
-      numero =  numero + 2;
-      nuevoArray[i] = numero;
-    }
+ for(var i =0; i<10;i++){
+  if(i === 5){
+    continue;
+  }else{
+    suma = suma + 2;
+    nuevoArray.push(suma);
   }
+  
+  
+ }
 
-  return nuevoArray;
+ return nuevoArray;
 }
 
 
